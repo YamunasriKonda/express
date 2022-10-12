@@ -3,9 +3,9 @@ const router = require("express").Router();
 
 let names = ["add", "chris", "rhys", "dale", "bob"];
 
-router.get("/getAll", (req, res) => res.send(names));
+router.get("/getAll", (req, res, next) => res.send(names));
 
-router.get("/get/:id", (req, res) => res.send(names[req.params.id]));
+router.get("/get/:id", (req, res, next) => res.send(names[req.params.id]));
 
 router.get("/getName/:name", (req, res) => {
     let usr = req.params.name;

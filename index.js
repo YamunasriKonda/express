@@ -10,4 +10,6 @@ app.use(bodyParser.json());
 
 app.use("/route", routes);
 
-app.listen(2019);
+const server = app.listen(2019);
+
+module.exports = server;
